@@ -1,0 +1,26 @@
+{% extends '_base.html' %}
+
+
+{% block content %}
+
+    <table class="table">
+        <thead>
+            <tr>
+                <th scope="col">#</th>
+                <th scope="col">Событие</th>
+                <th scope="col">Цена</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for ticket in tickets %}
+            <tr class="tr">
+                <th scope="row" >{{ ticket.id }}</th>
+                <td>{{ ticket.event.name }}</td>
+                <td>{{ ticket.price }}</td>
+
+            </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+
+{% endblock content %}
